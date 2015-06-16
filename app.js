@@ -110,17 +110,3 @@ io.on('connection', function(client) {
 server.listen(1000, function () {
     console.log('Listening on port 1000');
 });
-
-// TODO: When client leaves, output that to chat
-// Clean up styling
-// Handle refreshes better
-// Separate this into a separate storage module
-// Use templating engine
-// Implement unit tests
-// Have chat groups + implement private messaging
-// Highlight the current user
-// Make it so that chat is always scrolled to bottom
-// Implement keyboard shortcuts
-// Add customizability for each user
-// Add handling for lowercase/uppercase usernames
-// Implement promises (bluebird?)
