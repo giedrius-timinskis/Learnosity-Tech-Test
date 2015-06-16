@@ -4,10 +4,12 @@
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
+
 // When using socket.io it is important to pass in HTTP server object
 var io = require('socket.io')(server);
 var storage = require('./storage/storage');
 
+// Redis is used for persistent storage
 var redis = require('redis');
 var redisClient = redis.createClient();
 //app.use(require('body-parser').json());
