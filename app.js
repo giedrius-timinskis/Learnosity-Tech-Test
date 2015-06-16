@@ -24,7 +24,7 @@ app.get('*', express.static('./public'));
  * using Redis storage. It takes username and message
  * as arguments, pushes it into a a slot called
  * "messages", and trims the oldest 11th message
-*/
+ */
 var storeMessage = function(username, message) {
     var message = JSON.stringify({username: username, message: message});
     // Pass the messages into the redis client for storage

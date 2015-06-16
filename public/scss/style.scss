@@ -1,9 +1,5 @@
 @import "normalize";
 
-$light-blue: #a0d8df;
-$grey: #f0f1f1;
-$museo: 'museo300', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 @font-face {
     font-family: 'museo300';
     src: url('../fonts/Museo300-Regular-webfont.eot');
@@ -12,10 +8,23 @@ $museo: 'museo300', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-style: normal;
 }
 
+$museo: 'museo300', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$blue: rgb(41, 128, 185);
+$grey: rgb(236, 240, 241);
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
 html * {
     font-size: 16px;
 }
-h1, p, label {
+
+div {
+    font-family: $museo;
+}
+
+h1, p, label, input, button, strong {
     text-align: center;
     font-family: $museo;
 }
@@ -24,84 +33,84 @@ h1, p, label {
     max-height: 500px;
     width: 600px;
     margin: 0 auto;
+
     h1 {
         padding-top: 10px;
         margin-bottom: 20px;
+        display: none;
+    }
+
+    .inner-pad {
+        padding: 10px 15px;
     }
 
     .username-container {
         margin-top: 30px;
         width: 100%;
-        display:block;
-//        display: none;
+
         label, input {
             text-align: center;
             display: block;
             font-size: 16px;
             margin: 0 auto 10px;
         }
+
         input[type="text"] {
-            border-left: none;
-            border-right: none;
-            border-top: 2px solid $light-blue;
-            border-bottom: 2px solid $light-blue;
+            border-width: 2px 0;
+            border-style: solid;
+            border-color: $blue;
         }
+
         input[type="submit"] {
             background: transparent;
             padding: 5px 10px;
-            border: 2px solid $light-blue;
+            border: 2px solid $blue;
             border-radius: 3px;
         }
+
         #error {
-            font-family: $museo;
             text-align: center;
             margin-bottom: 10px;
             color: red;
             font-weight: 700;
         }
     }
+
     .io-container {
         display: none;
         float: left;
         width: 70%;
-        background: $grey;
-        //        border: 1px solid darken($light-blue, 20);
-        border-radius: 5px 0 0 5px;
+
         .chat-window {
-            box-sizing: border-box;
-            padding: 10px 15px;
-            background: $light-blue;
+            background: $grey;
             height: 200px;
             overflow-y: auto;
-            font-family: $museo;
         }
+
         input[type="text"] {
-            display: inline-block;
             width: 75%;
             text-align: left;
             padding: 8px;
-            font-family: $museo;
-            border: none;
-            border-left: 1px solid $grey;
-            border-bottom: 1px solid $grey;
+            border: 2px $grey solid;
+            height: 40px;
         }
-        input[type="submit"] {
-            display: inline-block;
-            padding: 5px 5px 5px 10px;
+
+        button[type="submit"] {
+            width: 25%;
+            color: $grey;
             border: none;
-            background: none;
-            margin: 0;
+            background: $blue;
+            float: right;
+            height: 40px;
         }
     }
+
     .chat-members-container {
-        //display:inline-block;
-        display:none;
-        box-sizing: border-box;
-        padding: 10px;
-        width: auto;
-        min-width: 20%;
-        background: red;
+        display: none;
+        width: 30%;
+        background: $blue;
         min-height: 200px;
-        font-family: $museo;
+        color: $grey;
+        float: right;
     }
 }
