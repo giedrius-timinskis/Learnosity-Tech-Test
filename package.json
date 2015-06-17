@@ -1,9 +1,9 @@
 {
   "name": "Learnosity Chat App",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a demo app for Learnosity Tech Test",
   "main": "app.js",
-  "author": "",
+  "author": "Giedrius (Tim) Timinskis",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.12.2",
