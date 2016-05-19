@@ -1,0 +1,115 @@
+@import "normalize";
+
+@font-face {
+    font-family: 'museo300';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Museo300-Regular-webfont.woff2') format('woff2'), url('../fonts/Museo300-Regular-webfont.woff') format('woff'), url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'), url('../fonts/Museo300-Regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$museo: 'museo300', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$blue: rgb(41, 128, 185);
+$grey: rgb(236, 240, 241);
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+html * {
+    font-size: 16px;
+}
+
+div {
+    font-family: $museo;
+}
+
+h1, p, label, input, button, strong {
+    text-align: center;
+    font-family: $museo;
+}
+
+.app-container {
+    max-height: 500px;
+    width: 600px;
+    margin: 0 auto;
+
+    h1 {
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .inner-pad {
+        padding: 10px 15px;
+    }
+
+    .username-container {
+        margin-top: 30px;
+        width: 100%;
+
+        label, input {
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            margin: 0 auto 10px;
+        }
+
+        input[type="text"] {
+            border-width: 2px 0;
+            border-style: solid;
+            border-color: $blue;
+        }
+
+        input[type="submit"] {
+            background: transparent;
+            padding: 5px 10px;
+            border: 2px solid $blue;
+            border-radius: 3px;
+        }
+
+        #error {
+            text-align: center;
+            margin-bottom: 10px;
+            color: red;
+            font-weight: 700;
+        }
+    }
+
+    .io-container {
+        display: none;
+        float: left;
+        width: 70%;
+
+        .chat-window {
+            background: $grey;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        input[type="text"] {
+            width: 75%;
+            text-align: left;
+            padding: 8px;
+            border: 2px $grey solid;
+            height: 40px;
+        }
+
+        button[type="submit"] {
+            width: 25%;
+            color: $grey;
+            border: none;
+            background: $blue;
+            float: right;
+            height: 40px;
+        }
+    }
+
+    .chat-members-container {
+        display: none;
+        width: 30%;
+        background: $blue;
+        min-height: 200px;
+        color: $grey;
+        float: right;
+    }
+}
